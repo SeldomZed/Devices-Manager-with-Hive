@@ -107,7 +107,7 @@ class DevicesScreenState extends State<DevicesScreen> {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    var bar = screenHeight * 0.055;
+    var bar = screenHeight * 0.07;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(bar),
@@ -115,7 +115,7 @@ class DevicesScreenState extends State<DevicesScreen> {
           backgroundColor: Colors.white,
           elevation: 0,
           flexibleSpace: Padding(
-            padding: EdgeInsets.only(top: bar * 0.85),
+            padding: EdgeInsets.only(top: bar - (screenHeight * 0.025)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -127,7 +127,7 @@ class DevicesScreenState extends State<DevicesScreen> {
                   ]),
                   style: TextStyle(
                     letterSpacing: 0.6,
-                    fontSize: screenWidth * 0.075,
+                    fontSize: bar / 1.8,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
